@@ -11,5 +11,5 @@ workflow "Deploy to GitHub Pages" {
  action "Build and push docs" {
   needs = ["Filter branch"]
   uses = "clay/docusaurus-github-action/build_deploy@master"
-  secrets = ["DEPLOY_SSH_KEY"]
+  secrets = ["DEPLOY_SSH_KEY", "ALGOLIA_API_KEY"]
 }
